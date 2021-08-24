@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="copy_pose"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+        />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_img"
+        android:orientation="vertical"
+        tools:context=".copyPose.CopyPoseActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/onBackPress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/backbtn" />
+
+                <TextView
+                    android:id="@+id/copyposetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txt1"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Copy this Pose"
+                    android:textColor="@color/black_original"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/copytxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="120dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Help us keep Clique safe by verify your photo"
+                    android:textColor="@color/black1"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:scaleType="fitXY"
+                        app:cardCornerRadius="@dimen/dimen_10"
+                        android:layout_height="200dp">
+                    <ImageView
+                        android:id="@+id/profilesample"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1"
+                         />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="@dimen/dimen_5"
+                        app:cardCornerRadius="@dimen/dimen_10"
+                        android:layout_height="200dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                        <ImageView
+                            android:id="@+id/profile2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:visibility="visible"
+                            android:background="@drawable/uploadprofile" />
+                        <ImageView
+                            android:id="@+id/iv_addimages"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:visibility="visible"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/addprofile" />
+                    </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="40dp"
+                        android:src="@drawable/editprofile" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="Change pose"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="100dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Take a selfie that matches this pose"
+                    android:textColor="@color/blue"
+                    android:textAlignment="center"
+                    android:textSize="16dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_40"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="@font/manrope_light"
+                    android:gravity="center"
+                    android:text="Don't worry, this stays between us!"
+                    android:textColor="@color/dark_gray" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_save"
+                    android:padding="15dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:fontFamily="@font/manrope_medium"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/lnr1"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="40dp"
+                    android:textAllCaps="false"
+                    android:text="Save"
+                    android:background="@drawable/button_bg_enable"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

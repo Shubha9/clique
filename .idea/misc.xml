@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Updated_Clique_APP_1/app/src/main/res/layout/activity_network.xml" value="0.1796875" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/drawable/ic_share.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_chating.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_choose_interests.xml" value="0.1796875" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_edite_experience.xml" value="0.1" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_edite_profile.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_events_details.xml" value="0.22" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_new_pwd.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_sign_in.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_sign_up.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/activity_your_experience.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/fragment_add.xml" value="0.1768990634755463" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/fragment_chats.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/fragment_home.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/fragment_people.xml" value="0.1" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/fragment_request.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/layout_calender_list2.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/layout_chating_list_sender.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/layout_date_list2.xml" value="0.165625" />
+        <entry key="..\:/Users/CODEBELE/AndroidStudioProjects/clique-android-main/app/src/main/res/layout/layout_experiences_list.xml" value="0.16666666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

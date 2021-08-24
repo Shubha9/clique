@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="notification"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel"
+            />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.us.figma.report.NotificationActivity">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_206"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50">
+                    <RelativeLayout
+                        android:id="@+id/rl_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_onBackPress"
+                            android:layout_width="@dimen/dimen_25"
+                            android:layout_height="@dimen/dimen_25"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:src="@drawable/backpress"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notification"
+                            android:fontFamily="@font/manrope_bold"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:textSize="@dimen/font_18"
+                            android:textColor="@color/events_color"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <TextView
+                    android:id="@+id/tv_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Push Notification"
+                    android:fontFamily="@font/manrope_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:textSize="@dimen/font_16"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:textColor="@color/black_text"
+                    android:layout_centerVertical="true"/>
+                <LinearLayout
+                    android:id="@+id/ll_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_statustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Pause all"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_pauseall"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Experience"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_experience"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_events"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Events"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_events"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/tv_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Messages"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_messages"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Requests"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_requests"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:background="@color/view"
+                    android:layout_marginLeft="@dimen/dimen_28"
+                    android:layout_marginRight="@dimen/dimen_28"
+                    android:layout_marginTop="@dimen/dimen_42"/>
+                <TextView
+                    android:id="@+id/tv_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Notification Types"
+                    android:fontFamily="@font/manrope_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_35"
+                    android:textSize="@dimen/font_16"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:textColor="@color/black_text"
+                    android:layout_centerVertical="true"/>
+                <LinearLayout
+                    android:id="@+id/ll_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_30"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/dimen_14"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/black_original"
+                        android:text="Email and SMS"/>
+                    <ToggleButton
+                        android:id="@+id/toggle_email"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:background="@drawable/toggle_btn"
+                        android:checked="false"
+                        android:paddingLeft="@dimen/dimen_40"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout></ScrollView>
+</layout>

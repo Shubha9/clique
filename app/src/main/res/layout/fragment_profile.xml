@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="profile"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/profile_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activites.ProfileActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_margin="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Profile"
+                    android:textColor="@color/events_color"
+                    android:textSize="@dimen/font_18" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp">
+
+                    <ImageView
+                        android:id="@+id/iv_settings"
+                        android:layout_width="@dimen/dimen_45"
+                        android:layout_height="@dimen/dimen_45"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:src="@drawable/settings" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_proImage"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerInParent="true">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_profile2"
+                            android:layout_width="@dimen/dimen_150"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/profile_bg1" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_profile3"
+                            android:layout_width="@dimen/dimen_150"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/profile_bg2" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/dimen_150"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/profile_bg3" />
+
+
+                        <RelativeLayout
+                            android:layout_width="160dp"
+                            android:layout_height="@dimen/dimen_150"
+                            android:layout_centerInParent="true">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_profile1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/dimen_10"
+                                android:visibility="visible" />
+                            <!--  <de.hdodenhof.circleimageview.CircleImageView
+                                  android:id="@+id/iv_galleryImage"
+                                  android:layout_width="@dimen/dimen_100dp"
+                                  android:layout_height="@dimen/dimen_100dp"
+                                  android:layout_centerInParent="true"
+                                  android:paddingTop="@dimen/dimen_10"
+                                  android:visibility="gone"
+                                  android:src="@drawable/profile_main"/>-->
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_proName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_proImage"
+                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:id="@+id/tv_profileName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text=""
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/other_text"
+                            android:textSize="@dimen/font_20" />
+                        <ImageView
+                            android:id="@+id/iv_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/profile_chechk"
+                            android:layout_toRightOf="@+id/tv_profileName"
+                            android:layout_marginLeft="@dimen/dimen_20"
+                            android:visibility="visible"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_conectionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_proName"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/tv_total_connection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text=""
+                            android:textColor="@color/other_text"
+                            android:textSize="@dimen/font_18" />
+
+                        <TextView
+                            android:id="@+id/tv_connection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_toRightOf="@+id/tv_total_connection"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="Connections"
+                            android:textColor="@color/calender_strok"
+                            android:textSize="@dimen/font_18" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_bioData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_profile"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dimen_40"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_40"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="@string/conection_text"
+                    android:textSize="@dimen/font_15" />
+
+                <TextView
+                    android:id="@+id/tv_yourInterst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_bioData"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="YOUR INTERESTS"
+                    android:textColor="@color/other_text" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_findText"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_below="@+id/tv_yourInterst"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@drawable/learnfun_btn_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:src="@drawable/search_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_findMore"
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/iv_search"
+                        android:fontFamily="@font/manrope_bold"
+                        android:gravity="center"
+                        android:text="find more"
+                        android:textColor="@color/tab_text" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_selectedTags"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_40"
+                    android:layout_marginRight="@dimen/dimen_40"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_findText"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tv_editeProfile"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_below="@+id/rv_selectedTags"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_gravity="center"
+                    android:background="@drawable/message_btn_bg"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_yourExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_70"
+                    android:layout_below="@+id/tv_editeProfile"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:background="@drawable/youex_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_yourExp"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:src="@drawable/your_exp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_toRightOf="@+id/iv_yourExp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="Your Experience"
+                        android:textColor="@color/tab_text"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:id="@+id/iv_next"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:src="@drawable/next" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/event_calender"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_70"
+                    android:layout_below="@+id/rl_yourExperience"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_100dp"
+                    android:background="@drawable/youex_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_eventCalender"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:src="@drawable/event_calender" />
+
+                    <TextView
+                        android:id="@+id/tv_eventCalender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_toRightOf="@+id/iv_eventCalender"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="Event Calender"
+                        android:textColor="@color/tab_text"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:id="@+id/iv_nextCalender"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:src="@drawable/next" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

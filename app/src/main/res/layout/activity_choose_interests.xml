@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="choseyour"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activites.ChooseInterestsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_onBackPress"
+                android:layout_width="@dimen/dimen_30"
+                android:layout_height="@dimen/dimen_30"
+                android:src="@drawable/ic_backpress" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_chooseText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_bold"
+                    android:gravity="center"
+                    android:text="@string/choose_text"
+                    android:textColor="@color/choose"
+                    android:textSize="@dimen/font_20" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_movie_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_chooseText"
+                    android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_movie"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        >
+
+
+                        <ImageView
+                            android:id="@+id/iv_movies"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/movies" />
+
+                        <TextView
+                            android:id="@+id/tv_movie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_movies"
+                            android:layout_centerInParent="true"
+                            android:text="@string/moves_text"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutMovieCat"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_movie"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/tag_group"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="2dp"
+                            app:chipSpacing="-10dp">
+                        </com.google.android.material.chip.ChipGroup>
+                        <!--                        <co.lujun.androidtagview.TagContainerLayout-->
+                        <!--                            android:id="@+id/tagcontainerLayout"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_below="@+id/tv_movie"-->
+                        <!--                            android:background="@color/white"-->
+                        <!--                            android:padding="10dp"-->
+                        <!--                            app:container_background_color="@color/filter_bg"-->
+                        <!--                            app:tag_clickable="true"-->
+                        <!--                            app:tag_theme="pure_teal" />-->
+
+
+
+                    </com.us.clique.utils.ExpandableLayout>
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutOutCat"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_outdoor"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:visibility="visible">
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/cg_outdoor"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="-10dp"
+                            app:chipSpacing="-10dp"
+                            >
+                        </com.google.android.material.chip.ChipGroup>
+                        <!--                    <co.lujun.androidtagview.TagContainerLayout-->
+                        <!--                        android:id="@+id/tagcontainerOutLayout"-->
+                        <!--                        android:layout_width="@dimen/dimen_150"-->
+                        <!--                        android:layout_marginRight="@dimen/dimen_20"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_below="@+id/tv_movie"-->
+                        <!--                        android:background="@color/white"-->
+                        <!--                        android:padding="10dp"-->
+                        <!--                        app:container_background_color="@color/filter_bg"-->
+                        <!--                        app:tag_clickable="true"-->
+                        <!--                        app:tag_theme="pure_teal" />-->
+
+                    </com.us.clique.utils.ExpandableLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_sport"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expandableLayoutMovieCat">
+
+                        <ImageView
+                            android:id="@+id/iv_sports"
+                            android:layout_width="190dp"
+                            android:layout_height="190dp"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_15"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/sports" />
+
+                        <TextView
+                            android:id="@+id/tv_sports"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_sports"
+                            android:layout_centerInParent="true"
+                            android:text="@string/sports_text"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+                    </RelativeLayout>
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutSportsCat"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_sport"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:visibility="visible">
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/cg_sports"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="-10dp"
+                            app:chipSpacing="-10dp">
+                        </com.google.android.material.chip.ChipGroup>
+                    </com.us.clique.utils.ExpandableLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_art"
+                        android:layout_width="185dp"
+                        android:layout_below="@+id/expandableLayoutOutCat"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_art"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/art" />
+
+                        <TextView
+                            android:id="@+id/tv_art"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_art"
+                            android:layout_centerInParent="true"
+                            android:text="@string/art_text"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+                    </RelativeLayout>
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutArtsCat"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_art"
+                        android:layout_marginLeft="@dimen/dimen_25"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:visibility="visible">
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/cg_Arts"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="-10dp"
+                            app:chipSpacing="-10dp">
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </com.us.clique.utils.ExpandableLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_food"
+                        android:layout_width="185dp"
+                        android:layout_below="@+id/expandableLayoutSportsCat"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_1"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/food" />
+
+                        <TextView
+                            android:id="@+id/tv_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_1"
+                            android:layout_centerInParent="true"
+                            android:text="Food"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_outdoor"
+                        android:layout_width="185dp"
+                        android:layout_below="@id/expandableLayoutFoodsCat"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_outdoor"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/outdoor" />
+
+                        <TextView
+                            android:id="@+id/tv_outdoor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_outdoor"
+                            android:layout_centerInParent="true"
+                            android:text="@string/outdoor_text"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_music"
+                        android:layout_width="185dp"
+                        android:layout_below="@+id/expandableLayoutArtsCat"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_12"
+                            android:layout_width="190dp"
+                            android:layout_height="190dp"
+                            android:src="@drawable/music" />
+
+                        <TextView
+                            android:id="@+id/tv_music"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_12"
+                            android:paddingTop="@dimen/dimen_5"
+                            android:layout_centerInParent="true"
+                            android:text="Music &amp; Dance"
+                            android:textColor="@color/choose"
+                            android:textSize="@dimen/font_12" />
+                    </RelativeLayout>
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutFoodsCat"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_food"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        android:visibility="visible">
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/cg_food"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="-10dp"
+                            app:chipSpacing="-10dp">
+                        </com.google.android.material.chip.ChipGroup>
+
+
+                    </com.us.clique.utils.ExpandableLayout>
+                    <com.us.clique.utils.ExpandableLayout
+                        android:id="@+id/expandableLayoutMusicCat"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_music"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="@dimen/dimen_10"
+                        android:visibility="visible">
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/cg_music"
+                            app:chipStrokeColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            style="@style/Widget.MaterialComponents.Chip.Entry"
+                            android:layout_height="wrap_content"
+                            app:chipSpacingHorizontal="-10dp"
+                            app:chipSpacing="-10dp">
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </com.us.clique.utils.ExpandableLayout>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_tage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_150"
+                    android:layout_below="@+id/rl_movie_1"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_30"
+                    android:background="@drawable/cat_list_bg"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,. "
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="bottom"
+                    android:hint="Did we miss anything? Let us know!"
+                    android:inputType="text"
+                    android:paddingLeft="@dimen/dimen_17"
+                    android:paddingBottom="@dimen/dimen_16"
+                    android:textColorHint="@color/cat_bg"
+                    android:textSize="@dimen/font_12"></EditText>
+                <TextView
+                    android:id="@+id/pwderror"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_below="@id/et_tage"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_below="@+id/et_tage"
+                    android:background="@drawable/message_btn_bg"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="@dimen/dimen_20"/>
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</layout>

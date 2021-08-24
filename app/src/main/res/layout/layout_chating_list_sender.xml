@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chating_list"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:gravity="right"
+    android:layout_alignParentRight="true"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_rReciver"
+            android:layout_toRightOf="@+id/tv_recive"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/chat_in"
+            />
+
+        <TextView
+            android:id="@+id/tv_recive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:padding="@dimen/dimen_10"
+            android:background="@drawable/chat_et_message_bg"/>
+        <TextView
+            android:id="@+id/tv_recivetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recive"
+            android:textSize="@dimen/dimen_12"
+            android:text="13 May.9:30PM"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</layout>

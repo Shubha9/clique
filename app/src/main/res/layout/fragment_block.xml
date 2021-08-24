@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="block_fragment"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/bottom_line"/>
+        <RelativeLayout
+            android:id="@+id/rl_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:padding="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:src="@drawable/ic_blue_block"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/tv_bock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Block"
+                    android:textColor="@color/tab_text"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="@dimen/font_14"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_blockerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mounesh"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/tv_bock"
+                    android:textColor="@color/tab_text"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="@dimen/font_14"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_block"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:background="@color/bottom_line"
+            android:layout_marginTop="@dimen/dimen_10"/>
+
+        <TextView
+            android:id="@+id/tv_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_10"
+            android:text="@string/bottom_sheet_text"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textColor="@color/text_bottom"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btn_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_block"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@drawable/message_btn_bg"
+            android:text="Block"
+android:textAllCaps="false"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</layout>

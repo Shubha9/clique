@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="request_fragment"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+        <RelativeLayout
+            android:id="@+id/requests_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen_100dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:background="@drawable/search_et_bg">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/ic_baseline_search"
+                    android:fontFamily="@font/manrope_bold"
+                    android:hint="Search"
+                    android:paddingLeft="@dimen/dimen_15"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:textColorHint="@color/search_hint"
+                    android:textSize="@dimen/font_12" />
+            </RelativeLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_search">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_ReaueestMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/requestMessages"
+                android:textColor="@color/other_text"
+                android:textSize="@dimen/font_14" />
+
+            <RelativeLayout
+                android:id="@+id/rl_messagesMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ReaueestMessages">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_inboxList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_inboxMoreList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_nodaMessa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_100dp"
+                    android:layout_marginBottom="@dimen/dimen_100dp"
+                    />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_moreMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_inboxList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_moreMessages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="@dimen/dimen_2"
+                        android:text="More"
+                        android:textColor="@color/more"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_moreMessages"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dimen_20"
+                        android:padding="@dimen/dimen_2"
+                        android:src="@drawable/down" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_connectionAndRecjet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_messagesMain">
+
+                <TextView
+                    android:id="@+id/tv_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="CONNECT AND REJECTED"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/other_text"
+                    android:textSize="@dimen/font_14" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_connectRejectList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_connect"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_connectRejectListMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_connect"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_nodaRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_100dp"
+                    android:layout_marginBottom="@dimen/dimen_100dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_connectRejectList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="@dimen/dimen_2"
+                        android:text="More"
+                        android:textColor="@color/more"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_more"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dimen_20"
+                        android:padding="@dimen/dimen_2"
+                        android:src="@drawable/down" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_exMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_connectionAndRecjet">
+
+                <TextView
+                    android:id="@+id/tv_Reaueest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="EXPERIENCE REQUESTS"
+                    android:textColor="@color/other_text"
+                    android:textSize="@dimen/font_14" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_requestList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Reaueest"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_requestListMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Reaueest"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20" />
+
+                <TextView
+                    android:id="@+id/tv_nodaAccet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/request"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_100dp"
+                    android:layout_marginBottom="@dimen/dimen_100dp"
+                    />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_moreRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_requestList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_100dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_moreEvents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/manrope_bold"
+                        android:padding="@dimen/dimen_2"
+                        android:text="More"
+                        android:textColor="@color/more"
+                        android:textSize="@dimen/font_12" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_moreEvents"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/dimen_2"
+                        android:src="@drawable/down" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+</layout>

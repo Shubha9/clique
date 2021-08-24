@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chating_modle"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".activites.ChatingActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_margin="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_onBackPress"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/backpress" />
+
+                <TextView
+                    android:id="@+id/tv_personName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Mounesh"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:ellipsize="end"
+                    android:textColor="@color/events_color"
+                    android:textSize="@dimen/font_18" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_profile"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_10">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="@dimen/dimen_40"
+                        android:layout_height="@dimen/dimen_40"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/inbox_profile" />
+
+                    <ImageView
+                        android:id="@+id/iv_online"
+                        android:layout_width="@dimen/dimen_10"
+                        android:layout_height="@dimen/dimen_10"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/green_circle"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_chatMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <ImageView-->
+<!--                    android:layout_width="200dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:id="@+id/example"/>-->
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_chating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rl_etMain"
+                    android:foregroundGravity="right"
+                    android:scrollbars="vertical"
+                    app:reverseLayout="true"
+                    app:stackFromEnd="true" />
+                <RelativeLayout
+                    android:id="@+id/rl_etMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/dimen_20">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_write"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginRight="80dp"
+                        android:background="@drawable/chat_et_bg">
+
+                        <com.vanniktech.emoji.EmojiEditText
+                            android:id="@+id/et_emojoText"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="@font/manrope_regular"
+                            android:gravity="center_vertical"
+                            android:hint="Write a message"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:textColorHint="@color/tab_text"
+                            android:textSize="@dimen/font_10" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_mog"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_attaech"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:src="@drawable/mog_image" />
+
+                        <ImageView
+                            android:id="@+id/iv_attaech"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:layout_toLeftOf="@+id/iv_send"
+                            android:src="@drawable/ic_attach" />
+
+                        <ImageView
+                            android:id="@+id/iv_send"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_img_send" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_record"
+                        android:layout_width="@dimen/dimen_50"
+                        android:layout_height="@dimen/dimen_50"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:src="@drawable/ic_img_record" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

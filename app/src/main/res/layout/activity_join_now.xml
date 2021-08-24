@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="join_now"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_img"
+        android:orientation="vertical"
+        tools:context=".signUp.SignUpActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_50"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/joinbackbtn1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@id/txtsignup"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/backbtn" />
+
+                <TextView
+                    android:id="@+id/txtsignin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txt1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Join Now"
+                    android:textColor="@color/black_original"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="NAME"
+                    android:textColor="@color/black_original"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txt2"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_marginRight="@dimen/dimen_22"
+                    android:inputType="textWebEmailAddress"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/error1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/dobtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="BIRTHDAY"
+                    android:textColor="@color/black_original"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txt2"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_marginRight="@dimen/dimen_22"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:maxLength="0"
+                    android:textColor="@color/black_original"
+                    android:textSize="15dp" />
+                <!--    <View-->
+                <!--        android:layout_width="match_parent"-->
+                <!--        android:layout_height="1dp"-->
+                <!--        android:layout_below="@+id/et_dob"-->
+                <!--        android:layout_marginLeft="@dimen/dimen_25"-->
+                <!--        android:layout_marginRight="@dimen/dimen_25"-->
+                <!--        android:layout_marginTop="@dimen/dimen_5"-->
+                <!--        android:background="@color/line"/>-->
+
+
+                <TextView
+                    android:id="@+id/error2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:text="Please Enter Bithday date"
+                    android:visibility="gone"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/gendertxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="GENDER"
+                    android:textColor="@color/black_original"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gendertxt"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_marginRight="@dimen/dimen_22">
+
+                    <EditText
+                        android:id="@+id/et_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="select Gender"
+                        android:inputType="none"
+                        android:textColor="@color/other_text"
+                        android:textSize="@dimen/font_14" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_select_class"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/dimen_25"
+                            android:padding="@dimen/dimen_5"
+                            android:src="@drawable/ic_expend" />
+                    </RelativeLayout>
+
+                    <!--        <View-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="@dimen/dimen_1"-->
+                    <!--            android:layout_below="@id/et_gender"-->
+                    <!--            android:background="#818286"/>-->
+                </RelativeLayout>
+
+                <com.us.clique.utils.ExpandableLayout
+                    android:id="@+id/expandable_layout_select_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_gender"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="@dimen/dimen_30"
+                    android:visibility="gone"
+                    app:el_expanded="false">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_select_class"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_gender"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:background="@color/white"
+                        android:padding="@dimen/dimen_5" />
+                </com.us.clique.utils.ExpandableLayout>
+
+                <TextView
+                    android:id="@+id/error3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/biotxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="BIO"
+                    android:textColor="@color/black_original"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txt2"
+                    android:layout_marginLeft="@dimen/dimen_22"
+                    android:layout_marginRight="@dimen/dimen_22"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/error4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/agreetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="By continuing you agree CLIQUE"
+                    android:textColor="@color/black_original"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/privacytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/editsignup"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="@string/terms_of_services_and_privacy_policy"
+                    android:textColor="@color/blue"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/signinjoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lnr1"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/button_bg_enable"
+                    android:fontFamily="@font/manrope_bold"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</layout>

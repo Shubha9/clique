@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+           name="new_pwd"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".signUp.SignUpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_above="@id/txtsignup"
+        android:id="@+id/iv_onBackPressd"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Password"
+        android:fontFamily="@font/manrope_bold"
+        android:id="@+id/txtsignin"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:layout_above="@id/txt1"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black_original"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW PASSWORD"
+        android:fontFamily="@font/manrope_bold"
+        android:id="@+id/txt1"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black_original"
+        android:layout_above="@id/editsignup"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/newpwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_22"
+                android:layout_marginRight="@dimen/dimen_22"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/iv_eye_enable"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dimen_40"
+                android:onClick="showHideNewPassword"
+                android:src="@drawable/eyedisable" />
+        </RelativeLayout>
+    <TextView
+        android:id="@+id/error2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:visibility="gone"
+        android:fontFamily="@font/manrope_medium"
+        android:textColor="@color/red"
+        android:layout_marginRight="@dimen/dimen_25"
+        android:layout_marginLeft="@dimen/dimen_25"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMED NEW PASSWORD"
+        android:id="@+id/txt2"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="10dp"
+        android:fontFamily="@font/manrope_bold"
+        android:textStyle="bold"
+        android:autoSizeMaxTextSize="20dp"
+        android:textColor="@color/black_original"
+        android:layout_above="@id/password"
+        android:layout_marginTop="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/newpwd2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_22"
+                android:layout_marginRight="@dimen/dimen_22"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/iv_eye_enable2"
+                android:layout_width="@dimen/dimen_20"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_alignParentRight="true"
+                android:onClick="showHideNewPassword"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dimen_40"
+                android:src="@drawable/eyedisable"/>
+        </RelativeLayout>
+    <TextView
+        android:id="@+id/error1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:fontFamily="@font/manrope_medium"
+        android:layout_marginRight="@dimen/dimen_25"
+        android:layout_marginLeft="@dimen/dimen_25"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsigninbtn"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@color/white"
+        android:layout_below="@id/lnr1"
+        android:textAllCaps="false"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Sign in"
+        android:background="@drawable/button_bg_enable"/>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout></layout>

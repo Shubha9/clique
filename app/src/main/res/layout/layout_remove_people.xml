@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="events_request"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dimen_5"
+        android:layout_height="@dimen/dimen_60">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_removeProfile"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:src="@drawable/event_profile_1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_toRightOf="@+id/iv_removeProfile"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_bold"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:text="Mounesh,25"
+            android:textColor="@color/other_text"
+            android:textSize="@dimen/font_10" />
+
+
+        <ImageView
+            android:id="@+id/tv_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:gravity="center"
+            android:src="@drawable/ic_remove_paricipants" />
+
+    </RelativeLayout>
+</layout>

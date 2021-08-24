@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+           name="forgot_pwd2"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".signUp.SignUpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginLeft="30dp"
+        android:layout_above="@id/txtsignup"
+        android:id="@+id/otpbackbtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgotten Password"
+        android:id="@+id/txtsignup"
+        android:textStyle="bold"
+        android:fontFamily="@font/manrope_bold"
+        android:textSize="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_above="@id/txt1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black_original"/>
+    <ImageView
+        android:id="@+id/otpimg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/forwardimg"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER OTP"
+        android:id="@+id/otptxt"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@color/black_original"
+        android:layout_below="@id/password"
+        android:layout_marginTop="30dp"/>
+    <LinearLayout
+        android:id="@+id/lnr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+    <com.google.android.material.textfield.TextInputLayout
+android:layout_weight="1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp1"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:gravity="center"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="yes"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+android:layout_weight="1"
+        android:layout_width="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+      >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:maxLength="1"
+            android:digits="1234567890"
+            android:gravity="center"
+               android:imeOptions="actionNext"
+            android:importantForAutofill="yes"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+android:layout_weight="1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+       >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:digits="1234567890"
+
+            android:inputType="number"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="yes"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+android:layout_weight="1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+       >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otp4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:inputType="number"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:digits="1234567890"
+            android:importantForAutofill="yes"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/otp_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="invisible"
+        android:textColor="@color/red"
+        android:fontFamily="@font/manrope_regular"/>
+    <CheckBox
+        android:id="@+id/ck_otpAutoFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Auto fill"
+        android:layout_gravity="end"
+        android:fontFamily="@font/manrope_bold"
+        android:textSize="15dp"
+        android:visibility="invisible"
+        android:button="@drawable/check_bg"
+        android:checked="false"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black_original"
+        android:layout_marginRight="30dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_create"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:fontFamily="@font/manrope_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/lnr1"
+        android:layout_marginLeft="40dp"
+        android:textAllCaps="false"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="Create Password"
+        android:background="@drawable/button_bg_enable"/>
+        </LinearLayout>  </ScrollView>
+</LinearLayout>
+    </layout>

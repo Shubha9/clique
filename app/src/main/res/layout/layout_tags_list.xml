@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <data>
+
+        <variable
+            name="profile_tag_list"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_editeProfile"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/rv_selectedTags"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/dimen_40"
+        android:padding="@dimen/dimen_5"
+        android:layout_gravity="center"
+        android:background="@drawable/message_btn_bg"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center"
+        android:text="Movies"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:textColor="@color/white" />
+</LinearLayout>
+</layout>

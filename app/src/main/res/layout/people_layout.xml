@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="people_list"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_pic"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_10">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_35"
+                android:layout_marginBottom="@dimen/dimen_22"
+                android:background="@drawable/peoplebg" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/quizcard"
+            app:cardPreventCornerOverlap="false"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:cardCornerRadius="50dp"
+            android:layout_marginHorizontal="@dimen/dimen_40"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_people_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center" />
+        </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="@dimen/dimen_150"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/profilebgblack">
+
+            </ImageView>
+
+    </RelativeLayout>
+</layout>

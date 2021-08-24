@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+           name="landing_screen"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+tools:context=".landingScreen.FrameActivity"  >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1"
+        >
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager2.widget.ViewPager2>
+
+<LinearLayout
+        android:id="@+id/indicators"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="25dp"
+  android:gravity="center_horizontal"
+    android:layout_centerInParent="true"
+    android:layout_marginBottom="20dp"
+    android:layout_above="@id/btn"
+        android:layout_marginLeft="30dp"
+  />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem"
+        android:fontFamily="@font/manrope_bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:privateImeOptions="10"
+        android:paddingLeft="20dp"
+        android:textAllCaps="false"
+        android:paddingRight="20dp"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_bg"
+        android:layout_gravity="center"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+</layout>
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tablayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="26dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        app:tabBackground="@drawable/dot_selector"-->
+<!--       app:tabGravity="center"-->
+<!--        app:tabIndicatorHeight="0dp"-->
+<!--        app:tabPaddingStart="7dp"-->
+<!--       app:tabPaddingEnd="7dp"/>-->
+

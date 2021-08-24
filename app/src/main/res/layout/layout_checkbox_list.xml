@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="check_box"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/ck_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/check_box"
+            android:checked="false"
+            android:padding="5dp"
+            />
+        <TextView
+            android:id="@+id/tv_experence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ck_box"
+            android:padding="@dimen/dimen_10"
+            android:textColor="@color/check_box"
+            android:fontFamily="@font/manrope_regular"
+            android:paddingLeft="@dimen/dimen_20"
+            android:text="Saved Experiences"
+            android:textSize="@dimen/font_18"            />
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>

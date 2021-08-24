@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="report_fragment"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+        <LinearLayout
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/dimen_40"
+            tools:context=".networkSignal.NetworkActivity">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/on_back_press"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/onBackPress"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:fontFamily="@font/manrope_bold"
+                android:id="@+id/internet_tt_1"
+                android:textStyle="bold"
+                android:layout_marginTop="39px"
+                android:textSize="@dimen/font_16"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/tab_text"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your report is anonymous.if someone is in immediate danger,call the local emergency services-don't wait."
+                android:fontFamily="@font/manrope_regular"
+                android:id="@+id/internettxt_2"
+                android:textStyle="bold"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:textSize="@dimen/font_12"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/gray"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv_reportBulets"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20"
+                />
+        </LinearLayout>
+</layout>

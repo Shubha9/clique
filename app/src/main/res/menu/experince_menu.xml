@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/menu_top"
+
+        >
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/ic_report"
+            android:title=" Report"/>
+        <item
+            android:id="@+id/not_interest"
+            android:icon="@drawable/note_delete"
+            android:title=" Not Interested" >
+        </item>
+        <item
+            android:id="@+id/save"
+            android:icon="@drawable/ic_save"
+            android:title=" Save" >
+        </item>
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_share"
+            android:title=" Share" >
+        </item>
+
+        <item
+            android:id="@+id/copy_link"
+            android:icon="@drawable/ic_copy_link"
+            android:title=" Copy Link" >
+        </item>
+        <item
+            android:id="@+id/block"
+            android:icon="@drawable/ic_block"
+            android:title=" Block" >
+        </item>
+
+    </group>
+</menu>

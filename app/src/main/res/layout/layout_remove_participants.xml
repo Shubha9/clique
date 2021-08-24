@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_30"
+    android:layout_marginRight="@dimen/dimen_30"
+    android:background="@drawable/btn_white_bg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Participants ?"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/dimen_14"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_21"
+        android:fontFamily="@font/manrope_extrabold"/>
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_11"
+        android:background="@color/view1"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:text="By removing the participant, they will no longer be a part of the experience."
+        android:textColor="@color/gray_txt_color"
+        android:fontFamily="@font/manrope_extrabold"
+        android:layout_marginTop="@dimen/dimen_17"
+        android:layout_marginRight="@dimen/dimen_28"
+        android:textSize="@dimen/dimen_11"/>
+    <RelativeLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_28"
+        android:layout_marginRight="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen_17"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_no"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="Yes"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/dimen_14" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="No"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/dimen_14" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="people_ints"
+            type="com.us.clique.people.PeopleViewModel" />
+    </data>
+   <LinearLayout
+       android:id="@+id/ll_1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/dimen_5"
+       android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/people_btn_bg"
+                    android:text="@string/movie"
+                    android:id="@+id/tv_movie"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_medium"/>
+
+
+            </LinearLayout>
+
+</layout>

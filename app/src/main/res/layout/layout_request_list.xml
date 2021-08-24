@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="events_request"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:padding="@dimen/dimen_5"
+    android:layout_height="@dimen/dimen_60">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_requestProfile"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_centerVertical="true"
+        android:src="@drawable/event_profile_1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mounesh"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/other_text"
+            android:textSize="@dimen/font_10"
+            android:layout_toRightOf="@+id/iv_requestProfile"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:ellipsize="end"
+            android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tv_accept"
+        android:layout_width="80dp"
+        android:layout_height="@dimen/dimen_30"
+        android:text="Accept"
+        android:gravity="center"
+        android:background="@drawable/message_btn_bg"
+        android:layout_toLeftOf="@id/tv_reject"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_10"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/tv_reject"
+        android:layout_width="80dp"
+        android:layout_height="@dimen/dimen_30"
+        android:text="Reject"
+        android:background="@drawable/learnfun_btn_bg"
+        android:gravity="center"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/tab_text"
+        android:textSize="@dimen/font_10"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+</layout>

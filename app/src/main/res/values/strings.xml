@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">clique</string>
+    <string name="facebook_app_id">323723192825537</string>
+    <string name="fb_login_protocol_scheme">fb323723192825537</string>
+    <string name="google_client_id">596488496228-hesj45jd4u4dfqt3ienudqp36r9at3ct.apps.googleusercontent.com</string>
+    <string name="choose_text">Choose your Interests</string>
+    <string name="mapkey">AIzaSyC800TOx30uGe-F-pVFGxwrSH0t08ulMCY</string>
+    <string name="instagram_apId">420632279264546</string>
+    <string name="moves_text">Movies &amp; TV</string>
+    <string name="outdoor_text">Outdoor Activities</string>
+    <string name="sports_text">Sports &amp; Fitness</string>
+    <string name="art_text">Art &amp; Culture</string>
+    <string name="movie_list_text">Movies @ NYC Free tickets</string>
+    <string name="join_text">You can join us guys for free tickets and snacks</string>
+    <string name="content">You can join us guys for free tickets and nwe free tickets and nwe You can join us guys for free tickets and nwe and nwe You can join us guys for free tickets and nwe.</string>
+    <string name="events_around_you">Events Around You</string>
+    <string name="youre_experince_details">Your Experience Details</string>
+    <string name="movie_title">Movies @ NYC Free tickets</string>
+    <string name="request">Request to Join</string>
+    <string name="conection_text">Just like pretty much everything else on the internet, your Instagram bio is all about making that impactful first impression</string>
+    <string name="bottom_sheet_text">They won’t be able to message you or find your profile, posts or experiences on Clique. They won’t be notified that you’ve blocked them.</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="email_error">Please enter a email address or Phone Number</string>
+    <string name="error_invalid_email">Email Invalid</string>
+    <string name="password_error">Please enter password</string>
+    <string name="confirm_pwd_error">Password Not Matched</string>
+    <string name="error_invalid_password">Please enter only 6 characters consisiting of special characters,Alphabets and digits</string>
+    <string name="confirm_password">Please enter Confirm Password</string>
+    <string name="lorem">Lorem</string>
+    <string name="skip">Skip >></string>
+    <string name="search">Search</string>
+    <string name="something_unexpected">Something unexpected has happened</string>
+    <string name="txt_no_internet">Please check your internet connection and try again</string>
+    <string name="black_text">We want to protect our community and make sure you feel safe. Don’t worry, your feedback is anonymous and they won’t know that you’ve blocked or reported them.</string>
+    <string name="map_text">Your current location will be used to recommend nearby experiences and connect you to those around you</string>
+    <string name="event_content">You can join us guys for free tickets and nwe free tickets and nwe You can join us guys for free tickets and nwe  and nwe You can join us guys for free tickets and nwe.  You can join us guys for free tickets and nwe free tickets and nwe You can join us guys for
+free tickets and nwe  and nwe You can join us guys for free tickets and nwe. You can join us guys for free tickets and nwe free tickets and nwe You can join us guys for free tickets and nwe  and nwe You can join us guys for free tickets and nwe. You can join us guys for free tickets and nwe free tickets and nwe You can join us guys for free tickets and nwe  and nwe You can join us guys for free tickets and nwe.
+</string>
+    <string name="requestMessages">MESSAGE REQUESTS</string>
+    <string name="network">You can join us guys for free tickets and nwe free tickets and nwe</string>
+    <string name="tv_networktxt">Network Signal not available</string>
+    <string name="somthing">Somthing Went Wrong</string>
+    <string name="no_data">No Data </string>
+    <string name="movie">Movie</string>
+    <string name="network_signal_error">Network Signal Error</string>
+    <string name="refresh">Refresh</string>
+    <string name="terms_of_services_and_privacy_policy">Terms of Services and Privacy Policy</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+
+</resources>

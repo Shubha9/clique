@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">clique</string>
+    <string name="choose_text">Choose your Interests</string>
+    <string name="moves_text">Movies &amp; TV</string>
+    <string name="outdoor_text">Outdoor Activities</string>
+    <string name="sports_text">Sports &amp; Fitness</string>
+    <string name="art_text">Art &amp; Culture</string>
+
+
+</resources>

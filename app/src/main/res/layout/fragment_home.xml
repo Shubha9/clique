@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="home_fragment"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_tab"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_70">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/lnr_tab">-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_tip1"-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:paddingTop="@dimen/_10sdp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/ic_bg_tooltip1"-->
+<!--                        android:layout_marginLeft="@dimen/_20sdp"-->
+<!--                        android:text="Experiences posted by others you might like"-->
+<!--                        android:textSize="@dimen/font_12"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/manrope_bold"-->
+<!--                        android:gravity="center_horizontal" />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingTop="@dimen/_10sdp"-->
+<!--                        android:layout_toRightOf="@id/tv_tip1"-->
+<!--                        android:background="@drawable/ic_bg_tooltip1"-->
+<!--                        android:layout_marginLeft="@dimen/_20sdp"-->
+<!--                        android:text="Experiences posted by others you might like"-->
+<!--                        android:textSize="@dimen/font_12"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:fontFamily="@font/manrope_bold"-->
+<!--                        android:gravity="center_horizontal" />-->
+<!--                </RelativeLayout>-->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_70"
+                    android:layout_marginRight="@dimen/dimen_120dp"
+                    android:textAllCaps="false"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="@color/tab_text"
+                    app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                    app:tabTextColor="@color/untab_text" />
+
+                <LinearLayout
+                    android:id="@+id/lnr_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="@dimen/dimen_120dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_exp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_pep"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_filter"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_toLeftOf="@+id/rl_messages"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_filterbg">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/filtericon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_messages"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:background="@drawable/ic_filterbg">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/messages" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_below="@+id/rl_tab"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="    @color/tab_line" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

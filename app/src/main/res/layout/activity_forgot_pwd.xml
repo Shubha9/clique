@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+           name="forgot_pwd"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".signUp.SignUpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_above="@id/txtsignup"
+        android:id="@+id/pwdbackbtn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgotten Password"
+        android:id="@+id/txtfrwd"
+        android:textStyle="bold"
+        android:fontFamily="@font/manrope_bold"
+        android:textSize="28dp"
+        android:layout_marginTop="20dp"
+        android:layout_above="@id/txt1"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black_original"/>
+ <ImageView
+     android:id="@+id/fwdimg"
+     android:layout_width="200dp"
+     android:layout_height="200dp"
+     android:layout_gravity="center_horizontal"
+     android:src="@drawable/forwardimg"
+     />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL or PHONE NUMBER"
+        android:id="@+id/frwdtxt1"
+        android:layout_marginLeft="@dimen/dimen_25"
+        android:layout_marginBottom="10dp"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@color/black_original"
+        android:layout_below="@id/password"
+        android:layout_marginTop="30dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_22"
+        android:layout_marginRight="@dimen/dimen_22">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/frwdedit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+<TextView
+    android:id="@+id/error"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_25"
+    android:layout_marginRight="@dimen/dimen_25"
+    android:visibility="visible"
+    android:textColor="@color/red"
+    android:fontFamily="@font/manrope_regular"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frwdbtn"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="110dp"
+        android:layout_below="@id/lnr1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:textAllCaps="false"
+        android:text="Send OTP"
+        android:background="@drawable/button_bg_enable"/>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="filters1"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.Filters1Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_margin="@dimen/dimen_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_onBackPress"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:layout_centerVertical="true"
+                android:src="@drawable/backpress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Filters"
+                android:textColor="@color/events_color"
+                android:textSize="@dimen/font_18" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+<RelativeLayout
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
+
+   <!-- <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:id="@+id/rv_checkList">
+
+    </androidx.recyclerview.widget.RecyclerView>-->
+
+
+</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/ck_pastEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:buttonTint="#262A34"
+                    android:textColor="@color/check_box2"
+                    android:text="Past Experiences"
+                    android:textSize="@dimen/font_18" />
+
+
+                <CheckBox
+                    android:id="@+id/ck_upcomingEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ck_pastEx"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:fontFamily="@font/manrope_regular"
+                    android:buttonTint="@color/check_box2"
+                    android:textColor="@color/check_box"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="Upcoming Experiences"
+                    android:textSize="@dimen/font_18" />
+
+                <CheckBox
+                    android:id="@+id/ck_myEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ck_upcomingEx"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:fontFamily="@font/manrope_regular"
+                    android:buttonTint="@color/check_box2"
+                    android:textColor="@color/check_box"
+
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="My Experiences"
+                    android:textSize="@dimen/font_18" />
+
+                <CheckBox
+                    android:id="@+id/ck_joinedEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ck_myEx"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:fontFamily="@font/manrope_regular"
+                    android:buttonTint="@color/check_box2"
+                    android:textColor="@color/check_box"
+
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="Joined Experiences"
+                    android:textSize="@dimen/font_18" />
+
+                <CheckBox
+                    android:id="@+id/ck_savedEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ck_joinedEx"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:buttonTint="@color/check_box2"
+                    android:textColor="@color/check_box"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="Saved Experiences"
+                    android:textSize="@dimen/font_18" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_50"
+        android:layout_marginRight="@dimen/dimen_50"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:text="Apply"
+        android:elevation="0dp"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:stateListAnimator="@null"
+        android:textAllCaps="false"
+        android:background="@drawable/button_bg_enable"/>
+</RelativeLayout>
+</layout>

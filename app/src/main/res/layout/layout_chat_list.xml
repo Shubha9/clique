@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chat_list"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_profile"
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_centerVertical="true">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_centerVertical="true"
+                android:src="@drawable/inbox_profile" />
+            <ImageView
+                android:id="@+id/iv_online"
+                android:layout_width="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_10"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@drawable/green_circle" />
+            <ImageView
+                android:id="@+id/iv_off_online"
+                android:layout_width="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_10"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_circle_read" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rl_profile"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:fontFamily="@font/manrope_bold"
+                android:text="Mounesh Kalal"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:ellipsize="end"
+                android:textColor="@color/messages_list"
+                android:textSize="@dimen/font_12" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Shall we go to...."
+                android:textColor="@color/messages_list"
+                android:textSize="@dimen/font_12" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:fontFamily="@font/manrope_bold"
+            android:text="14 May"
+            android:textColor="@color/month_color" />
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:layout_below="@+id/tv_date"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:visibility="gone"
+            android:background="@drawable/blue_circle"
+            android:fontFamily="@font/manrope_bold"
+            android:gravity="center"
+            android:text="14"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/calender_strok"
+            android:layout_below="@+id/rl_profile"
+            android:layout_marginTop="@dimen/dimen_10"/>
+    </RelativeLayout>
+</layout>

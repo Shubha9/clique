@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="reportPoup_fragment"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/report_bg"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_report"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_report"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/ic_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:layout_toRightOf="@+id/iv_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/white_color"
+        android:layout_below="@+id/rl_report"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_notIntrest"
+        android:layout_below="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_notIntrested"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/note_delete"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_notIntrested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Interested"
+            android:layout_toRightOf="@+id/iv_notIntrested"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/white_color"
+        android:layout_below="@+id/rl_notIntrest"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_save"
+        android:layout_below="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/ic_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_toRightOf="@+id/iv_save"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/white_color"
+        android:layout_below="@+id/rl_save"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_share"
+        android:layout_below="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/ic_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:layout_toRightOf="@+id/iv_share"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/copylink"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/white_color"
+        android:layout_below="@+id/rl_share"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_copyLink"
+        android:layout_below="@+id/copylink"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_copyLink"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/ic_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_copyLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CopyLink"
+            android:layout_toRightOf="@+id/iv_copyLink"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/white_color"
+        android:layout_below="@+id/rl_copyLink"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_10"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_block"
+        android:layout_below="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20">
+        <ImageView
+            android:id="@+id/iv_block"
+            android:layout_width="@dimen/dimen_10"
+            android:layout_height="@dimen/dimen_30"
+            android:src="@drawable/ic_report"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"/>
+
+        <TextView
+            android:id="@+id/tv_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Block"
+            android:layout_toRightOf="@+id/iv_block"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+</layout>

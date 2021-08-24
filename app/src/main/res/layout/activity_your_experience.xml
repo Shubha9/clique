@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="your_experience"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activites.YourExperienceActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_margin="@dimen/dimen_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_onBackPress"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/backpress" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Your Experience"
+                    android:textColor="@color/events_color"
+                    android:textSize="@dimen/font_18" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <!--
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ck_past"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/check_box"
+                    android:checked="false"
+                    />
+                <TextView
+                    android:id="@+id/tv_experence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ck_box"
+                    android:padding="@dimen/dimen_5"
+                    android:textColor="@color/check_box"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="Past Experiences"
+                    android:textSize="@dimen/font_10"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_upcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ck_upComing"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/check_box"
+                    android:checked="false"
+                    />
+                <TextView
+                    android:id="@+id/tv_upComing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/ck_box"
+                    android:padding="@dimen/dimen_5"
+                    android:textColor="@color/check_box"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="Upcoming Experience"
+                    android:textSize="@dimen/font_10"            />
+            </LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/ll_past_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ck_past"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_yourexperience"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Past Experiences"
+                    android:textColor="@color/check_box"
+                    android:textSize="@dimen/font_10" />
+
+                <RadioButton
+                    android:id="@+id/ck_upComing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_yourexperience"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:text="Upcoming Experiences"
+                    android:textColor="@color/check_box"
+                    android:textSize="@dimen/font_10" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_save_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_past_exp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_save_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:layout_marginRight="@dimen/dimen_24"
+                android:background="@drawable/bg_curve_popup"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dimen_16"
+                android:paddingBottom="@dimen/dimen_16"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_13"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_17"
+                    android:src="@drawable/save_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Experience Saved in your Profile"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/dimen_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_copylink_popup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_24"
+                android:layout_marginRight="@dimen/dimen_24"
+                android:background="@drawable/bg_curve_popup"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dimen_16"
+                android:paddingBottom="@dimen/dimen_16"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_10"
+                    android:layout_height="@dimen/dimen_13"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_17"
+                    android:src="@drawable/copylink_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Link Successfully Copied"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/dimen_12" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dateList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_save_copy"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20" />
+
+        <TextView
+            android:id="@+id/tv_noDataAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Data Available"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+</layout>

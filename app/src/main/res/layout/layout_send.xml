@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/tv_delete_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="@dimen/dimen_10"
+            android:text="DELETE THE CHAT"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14" />
+
+
+        <View
+            android:id="@+id/lout_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_below="@+id/tv_delete_chat"
+            android:background="@color/gray" />
+
+
+        <TextView
+            android:id="@+id/tv_deleteTextt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lout_line"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@color/white"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5"
+            android:text="Do You want Send To"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_12"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_deleteTextt"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/dimen_35"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:background="@drawable/message_btn_bg"
+                android:stateListAnimator="@null"
+                android:text="CANCEL"
+                android:textColor="@color/white"
+
+                />
+
+            <Button
+                android:id="@+id/btn_Delete"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/dimen_35"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/request_join_btn_bg"
+                android:stateListAnimator="@null"
+                android:text="SEND"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>

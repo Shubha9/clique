@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="internet_viewmodel"
+            type="com.us.clique.bottomNavigation.fragments.InternetConnectionFragment" />
+    </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:id="@+id/ll_network"
+            tools:context=".networkSignal.NetworkActivity">
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:fillViewport="true">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/rl_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_onBackPress"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/backpress"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dimen_10" />
+
+                            <TextView
+                                android:id="@+id/tv_about"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/network_signal_error"
+                                android:fontFamily="@font/manrope_bold"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_18ssp"
+                                android:textColor="@color/events_color"
+                                android:layout_centerVertical="true"/>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/toolbar">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Network Signal not available"
+                        android:fontFamily="@font/manrope_bold"
+                        android:id="@+id/tv_networktxt"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/other_text"/>
+                    <TextView
+                        android:id="@+id/tv_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/network"
+                        android:textSize="@dimen/_12ssp"
+                        android:gravity="center"
+                        android:layout_below="@+id/tv_networktxt"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textColor="@color/other_text"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                    <ImageView
+                        android:id="@+id/iv_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_300sdp"
+                        android:layout_below="@+id/tv_txt"
+                        android:src="@drawable/networkerror"
+                        android:layout_gravity="center"/>
+                    <Button
+                        android:id="@+id/bt_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_img"
+                        android:gravity="center"
+
+                        android:background="@drawable/button_background"
+                        android:layout_marginLeft="@dimen/_100sdp"
+                        android:layout_marginRight="@dimen/_100sdp"
+                        android:layout_marginBottom="@dimen/_58sdp"
+                        android:text="@string/refresh"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:textSize="@dimen/_15ssp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+<!--            </ScrollView>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>
+

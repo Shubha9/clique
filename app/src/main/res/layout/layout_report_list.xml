@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="report_list"
+            type="com.us.clique.bottomNavigation.fragments.module.BottomNavigationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:gravity="center_vertical">
+        <CheckBox
+            android:id="@+id/ck_box"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:checked="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            />
+
+        <TextView
+            android:id="@+id/tv_buletText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:textSize="12sp"
+            android:text="spam"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/blue"
+            android:layout_toRightOf="@+id/ck_box" />
+
+    </RelativeLayout></layout>
